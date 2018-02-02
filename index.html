@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LYRICS TRIVIA</title>
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+<!--
+<label for="input">Search: </label><input id="input" type="search" >
+<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">Submit</button>
+<table id="output" class="table table-hover table-bordered"></table>
+-->
+
+
+<div data-role="page" id="page1">
+    <div data-role="header" id="pageHeader">
+        <h1>LYRICS TRIVIA</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <!--
+        <label for="basic">Artist Name:</label>
+        <input type="text" name="name" id="basic" value="">
+        -->
+    </div>
+    <div>
+        <button id="startButton" onclick="gameStart()">Start game</button>
+    </div>
+</div>
+
+
+<div data-role="page" id="page2" data-add-back-btn="true">
+    <div data-role="header" id="pageHeader2" data-add-back-btn="true">
+        <h1>LYRICS TRIVIA</h1>
+    </div>
+    <div id="guessMessage">Guess the song</div>
+    <ol data-role="listview" id="output">
+
+    </ol>
+    <button id="firstOption" onclick="guessFirst()"></button>
+    <button id="secondOption" onclick="guessSecond()"></button>
+    <button id="thirdOption" onclick="guessThird()"></button>
+    <button id="fourthOption" onclick="guessFourth()"></button>
+</div>
+
+
+</body>
+</html>

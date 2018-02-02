@@ -1,0 +1,96 @@
+#page1{
+    background: white;
+}
+
+
+#pageHeader{
+    background: dodgerblue;
+    font-size: 70pt;
+    font-family: "Times New Roman", monospace;
+    color: gold;
+    height: 200px;
+}
+
+#pageHeader2{
+    background: dodgerblue;
+    font-size: 70pt;
+    font-family: "Times New Roman", monospace;
+    color: gold;
+    height: 200px;
+}
+
+h1{
+    position: absolute;
+    top: 5%;
+    left: -15%;
+}
+
+#startButton{
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    height: 250px;
+    width: 500px;
+    background-color: darkgreen;
+    border: solid thick black;
+    color: gold;
+    font-size: 50pt;
+    font-family: "Times New Roman", monospace;
+}
+
+#guessMessage{
+    position: absolute;
+    top: 17%;
+    left: 26%;
+    font-size: 50pt;
+    font-family: "Times New Roman", monospace;
+}
+
+#firstOption{
+    position: absolute;
+    top: 59%;
+    left: 15%;
+    height: 150px;
+    width: 250px;
+    background-color: darkgreen;
+    border: solid thick black;
+    color: gold;
+    font-size: 40pt;
+    font-family: "Times New Roman", monospace;
+}
+#secondOption{
+    position: absolute;
+    top: 59%;
+    left: 55%;
+    height: 150px;
+    width: 250px;
+    background-color: darkgreen;
+    border: solid thick black;
+    color: gold;
+    font-size: 40pt;
+    font-family: "Times New Roman", monospace;
+}
+#thirdOption{
+    position: absolute;
+    top: 69%;
+    left: 15%;
+    height: 150px;
+    width: 250px;
+    background-color: darkgreen;
+    border: solid thick black;
+    color: gold;
+    font-size: 40pt;
+    font-family: "Times New Roman", monospace;
+}
+#fourthOption{
+    position: absolute;
+    top: 69%;
+    left: 55%;
+    height: 150px;
+    width: 250px;
+    background-color: darkgreen;
+    border: solid thick black;
+    color: gold;
+    font-size: 40pt;
+    font-family: "Times New Roman", monospace;
+}
