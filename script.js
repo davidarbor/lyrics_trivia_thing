@@ -33,7 +33,21 @@ function gameStart(){
     $("body").pagecontainer("change", "#page2", {});
 }
 
+function guessFirst(){
+    $("body").pagecontainer("change", "#page3", {});
+}
 
+function guessSecond(){
+    $("body").pagecontainer("change", "#page4", {});
+}
+
+function guessThird(){
+
+}
+
+function guessFourth(){
+
+}
 
 
 

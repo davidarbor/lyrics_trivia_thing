@@ -10,8 +10,21 @@
     color: gold;
     height: 200px;
 }
-
 #pageHeader2{
+    background: dodgerblue;
+    font-size: 70pt;
+    font-family: "Times New Roman", monospace;
+    color: gold;
+    height: 200px;
+}
+#pageHeader3{
+    background: dodgerblue;
+    font-size: 70pt;
+    font-family: "Times New Roman", monospace;
+    color: gold;
+    height: 200px;
+}
+#pageHeader4{
     background: dodgerblue;
     font-size: 70pt;
     font-family: "Times New Roman", monospace;
@@ -41,7 +54,7 @@ h1{
 #guessMessage{
     position: absolute;
     top: 17%;
-    left: 26%;
+    left: 27%;
     font-size: 50pt;
     font-family: "Times New Roman", monospace;
 }
