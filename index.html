@@ -41,27 +41,30 @@
         <h1>LYRICS TRIVIA</h1>
     </div>
     <div id="guessMessage">Guess the song</div>
-    <ol data-role="listview" id="output">
-
-    </ol>
+    <!--<ol data-role="listview" id="output"></ol>-->
+    <div id="lyricsOutput">whomst</div>
     <button id="firstOption" onclick="guessFirst()"></button>
     <button id="secondOption" onclick="guessSecond()"></button>
     <button id="thirdOption" onclick="guessThird()"></button>
     <button id="fourthOption" onclick="guessFourth()"></button>
 </div>
 
-<div data-role="page" id="page3">
-    <div data-role="header" id="pageHeader3">
+<div data-role="page" id="page3" data-add-back-btn="true">
+    <div data-role="header" id="pageHeader3" data-add-back-btn="true">
         <h1>LYRICS TRIVIA</h1>
     </div>
     <div id="winMessage">You got it right! Congratulations!</div>
+    <button id="nextSong3" onclick="backToFirst()">Next song</button>
 </div>
 
-<div data-role="page" id="page4">
-    <div data-role="header" id="pageHeader4">
+<div data-role="page" id="page4" data-add-back-btn="true">
+    <div data-role="header" id="pageHeader4" data-add-back-btn="true">
         <h1>LYRICS TRIVIA</h1>
     </div>
-    <div id="loseMessage"></div>
+    <div id="loseMessage">Sorry, that's not right!</div>
+    <div id="loseMessage2">The correct answer was</div>
+    <div id="songName">eks dee</div>
+    <button id="nextSong4" onclick="backToFirst()">Next song</button>
 </div>
 
 </body>

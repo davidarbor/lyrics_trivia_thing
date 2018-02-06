@@ -4,15 +4,15 @@
 
 $(document).ready(function(){
     var $submit = $("#myButton");
-    var $input = $("#basic");
-    var $output = $("#output");
+    //var $input = $("#basic");
+    var $output = $("#lyricsOutput");
     $submit.click(function(){
-        var $btn = $(this).button();
-
+        //var $btn=$(this).button();
         $output.empty();
         var search=changeSpace($input.val());
         $.ajax({
-            url: "https://itunes.apple.com/search?term="+search,
+            url: "http://api.musixmatch.com/ws/1.1/"+search,
+            //url: "https://itunes.apple.com/search?term="+search,
             type: 'GET',
             crossDomain: true,
             dataType: 'jsonp',
@@ -24,7 +24,7 @@ $(document).ready(function(){
                 alert('Failed!');
             }
         });
-        $btn.button();
+        //$btn.button();
     });
 });
 
@@ -49,7 +49,9 @@ function guessFourth(){
 
 }
 
-
+function backToFirst(){
+    $("body").pagecontainer("change", "#page2", {});
+}
 
 
 
