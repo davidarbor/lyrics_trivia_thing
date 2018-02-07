@@ -11,14 +11,14 @@ $(document).ready(function(){
         $output.empty();
         var search=changeSpace($input.val());
         $.ajax({
-            url: "http://api.musixmatch.com/ws/1.1/"+search,
+            url: "http://api.musixmatch.com/ws/1.1?apikey=77c753d1b959d1f133e82303ce171a1d"+search,
             //url: "https://itunes.apple.com/search?term="+search,
             type: 'GET',
             crossDomain: true,
             dataType: 'jsonp',
             success: function(result) {
                 console.log(result);
-                processFunction(result);
+                //processFunction(result);
             },
             error: function(){
                 alert('Failed!');
@@ -49,7 +49,7 @@ function guessFourth(){
 
 }
 
-function backToFirst(){
+function backToSecond(){
     $("body").pagecontainer("change", "#page2", {});
 }
 
@@ -83,7 +83,7 @@ function backToFirst(){
 
 
 
-/*function processFunction(result) {
+function processFunction(result) {
     var $output = $("#output");
     //write a for loop that iterates over result.results and output data to the page
     $output.listview({
@@ -118,4 +118,4 @@ function changeSpace(value){
         }
     }
     return returnValue
-}*/
+}
