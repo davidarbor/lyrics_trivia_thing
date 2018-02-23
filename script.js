@@ -3,34 +3,50 @@
  */
 
 $(document).ready(function(){
-    var $submit = $("#myButton");
-    //var $input = $("#basic");
+    var $submit = $("#startButton");
     var $output = $("#lyricsOutput");
-    $submit.click(function(){
-        //var $btn=$(this).button();
+    /*$submit.click(function(){
         $output.empty();
-        var search=changeSpace($input.val());
+        // $.ajax({
+        //     url: "http://api.musixmatch.com/ws/1.1/track.get?track_id=15445219&apikey=77c753d1b959d1f133e82303ce171a1d",
+        //     type: 'GET',
+        //     crossDomain: true,
+        //     dataType: 'jsonp',
+        //     success: function(result) {
+        //         console.log(result);
+        //     },
+        //     error: function(){
+        //         alert('Failed!');
+        //     }
+        // });
         $.ajax({
-            url: "http://api.musixmatch.com/ws/1.1?apikey=77c753d1b959d1f133e82303ce171a1d"+search,
-            //url: "https://itunes.apple.com/search?term="+search,
+            url: 'http://api.musixmatch.com/ws/1.1/track.get?track_id=15445219&apikey=77c753d1b959d1f133e82303ce171a1d',
+            dataType: 'JSONP',
+            jsonpCallback: 'callback',
             type: 'GET',
-            crossDomain: true,
-            dataType: 'jsonp',
-            success: function(result) {
-                console.log(result);
-                //processFunction(result);
-            },
-            error: function(){
-                alert('Failed!');
+            success: function(data){
+                console.log(data);
             }
         });
-        //$btn.button();
-    });
+
+    });*/
 });
 
 function gameStart(){
     $("#startButton").fadeOut(200);
     $("body").pagecontainer("change", "#page2", {});
+    var songsArray=[song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12, song13, song14, song15, song16, song17, song18, song19, song20];
+    console.log(song1.snippet);
+    var songNum=Math.floor(Math.random()*songsArray.length);
+    /*var songNum2=Math.floor(Math.random()*songsArray.length);
+    var songNum3=Math.floor(Math.random()*songsArray.length);
+    var songNum4=Math.floor(Math.random()*songsArray.length);
+    var songNum5=Math.floor(Math.random()*songsArray.length);*/
+    document.getElementById("lyricsOutput").innerHTML=songsArray[songNum].snippet;
+    /*document.getElementById("firstOption").textContent=songsArray[songNum2].songArtist;
+    document.getElementById("secondOption").textContent=songsArray[songNum3].songArtist;
+    document.getElementById("thirdOption").textContent=songsArray[songNum4].songArtist;
+    document.getElementById("fourthOption").textContent=songsArray[songNum5].songArtist;*/
 }
 
 function guessFirst(){
@@ -51,71 +67,4 @@ function guessFourth(){
 
 function backToSecond(){
     $("body").pagecontainer("change", "#page2", {});
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function processFunction(result) {
-    var $output = $("#output");
-    //write a for loop that iterates over result.results and output data to the page
-    $output.listview({
-        splitTheme: "b"
-    });
-    var $page1 = $("#page1");
-    $page1.pagecontainer({
-        defaults: true,
-        showLoadMsg: true,
-        allowSamePageTransition: true
-    });
-
-    var splitTheme = $output.listview("option", "splitTheme");
-    $output.listview( "option", "splitTheme", "b" );
-    for(var i = 0; i < result.results.length; i++) {
-        $output.append("<li class='ui-li-has-alt ui-li-has-thumb ui-first-child'><a href='" + result.results[i].previewUrl + "' class='ui-btn'><img src='" + result.results[i].artworkUrl60 + "'><h3>" + result.results[i].trackName + "</h3><p>" + result.results[i].artistName + "</p></a></li>");
-
-    }
-
-    $("body").pagecontainer("change", "#page2", {});
-
-}
-
-function changeSpace(value){
-    var returnValue = "";
-    for(var i = 0; i < value.length; i++){
-        if(value[i]== " "){
-            returnValue += "+"
-        }
-        else{
-            returnValue += value[i];
-        }
-    }
-    return returnValue
 }
