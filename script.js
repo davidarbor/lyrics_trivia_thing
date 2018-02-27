@@ -32,21 +32,41 @@ $(document).ready(function(){
     });*/
 });
 
+var songsArray = [song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12, song13, song14, song15, song16, song17, song18, song19, song20];
+
+var songNum=Math.floor(Math.random()*songsArray.length);
+var songNum2=Math.floor(Math.random()*songsArray.length);
+var songNum3=Math.floor(Math.random()*songsArray.length);
+var songNum4=Math.floor(Math.random()*songsArray.length);
+
+var currentSong=songsArray[songNum];
+
+var button1=document.getElementById("firstOption");
+var button2=document.getElementById("secondOption");
+var button3=document.getElementById("thirdOption");
+var button4=document.getElementById("fourthOption");
+var buttonArray=[button1, button2, button3, button4];
+
+var buttonOption=Math.floor(Math.random()*buttonArray.length);
+
 function gameStart(){
     $("#startButton").fadeOut(200);
     $("body").pagecontainer("change", "#page2", {});
-    var songsArray=[song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12, song13, song14, song15, song16, song17, song18, song19, song20];
-    console.log(song1.snippet);
-    var songNum=Math.floor(Math.random()*songsArray.length);
-    /*var songNum2=Math.floor(Math.random()*songsArray.length);
-    var songNum3=Math.floor(Math.random()*songsArray.length);
-    var songNum4=Math.floor(Math.random()*songsArray.length);
-    var songNum5=Math.floor(Math.random()*songsArray.length);*/
-    document.getElementById("lyricsOutput").innerHTML=songsArray[songNum].snippet;
-    /*document.getElementById("firstOption").textContent=songsArray[songNum2].songArtist;
-    document.getElementById("secondOption").textContent=songsArray[songNum3].songArtist;
-    document.getElementById("thirdOption").textContent=songsArray[songNum4].songArtist;
-    document.getElementById("fourthOption").textContent=songsArray[songNum5].songArtist;*/
+    document.getElementById("lyricsOutput").innerHTML=currentSong.snippet;
+    switch(buttonOption){
+        case 0:
+            document.getElementById("firstOption").textContent=currentSong.songName;
+            break;
+        case 1:
+            document.getElementById("secondOption").textContent=currentSong.songName;
+            break;
+        case 2:
+            document.getElementById("thirdOption").textContent=currentSong.songName;
+            break;
+        case 3:
+            document.getElementById("fourthOption").textContent=currentSong.songName;
+            break;
+    }
 }
 
 function guessFirst(){
@@ -58,13 +78,20 @@ function guessSecond(){
 }
 
 function guessThird(){
-
+    $("body").pagecontainer("change", "#page4", {});
 }
 
 function guessFourth(){
-
+    $("body").pagecontainer("change", "#page4", {});
 }
 
 function backToSecond(){
     $("body").pagecontainer("change", "#page2", {});
+    gameStart();
 }
+
+console.log(songNum);
+console.log(songNum2);
+console.log(songNum3);
+console.log(songNum4);
+console.log(buttonOption);

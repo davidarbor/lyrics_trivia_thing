@@ -69,50 +69,50 @@ h1{
 
 #firstOption{
     position: absolute;
-    top: 59%;
-    left: 15%;
-    height: 150px;
-    width: 250px;
+    top: 44%;
+    left: 10%;
+    height: 250px;
+    width: 350px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
-    font-size: 40pt;
+    font-size: 25pt;
     font-family: "Times New Roman", monospace;
 }
 #secondOption{
     position: absolute;
-    top: 59%;
-    left: 55%;
-    height: 150px;
-    width: 250px;
+    top: 44%;
+    left: 50%;
+    height: 250px;
+    width: 350px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
-    font-size: 40pt;
+    font-size: 25pt;
     font-family: "Times New Roman", monospace;
 }
 #thirdOption{
     position: absolute;
-    top: 69%;
-    left: 15%;
-    height: 150px;
-    width: 250px;
+    top: 62%;
+    left: 10%;
+    height: 250px;
+    width: 350px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
-    font-size: 40pt;
+    font-size: 25pt;
     font-family: "Times New Roman", monospace;
 }
 #fourthOption{
     position: absolute;
-    top: 69%;
-    left: 55%;
-    height: 150px;
-    width: 250px;
+    top: 62%;
+    left: 50%;
+    height: 250px;
+    width: 350px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
-    font-size: 40pt;
+    font-size: 25pt;
     font-family: "Times New Roman", monospace;
 }
 
