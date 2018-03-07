@@ -43,7 +43,7 @@
     </div>
     <div id="guessMessage">Guess the song</div>
     <!--<ol data-role="listview" id="output"></ol>-->
-    <div id="lyricsOutput">whomst</div>
+    <div id="lyricsOutput"></div>
     <button id="firstOption" onclick="guessFirst()"></button>
     <button id="secondOption" onclick="guessSecond()"></button>
     <button id="thirdOption" onclick="guessThird()"></button>
@@ -55,7 +55,11 @@
         <h1>LYRICS TRIVIA</h1>
     </div>
     <div id="winMessage">You got it right! Congratulations!</div>
+    <div id="songName1"></div>
+    <div id="songArtists1"></div>
+    <div id="listen1">Listen to part of it here!</div>
     <button id="nextSong3" onclick="backToSecond()">Next song</button>
+    <audio controls="true" src="" id="audio1" type="audio/m4a"></audio>
 </div>
 
 <div data-role="page" id="page4" data-add-back-btn="true">
@@ -64,8 +68,11 @@
     </div>
     <div id="loseMessage">Sorry, that's not right!</div>
     <div id="loseMessage2">The correct answer was</div>
-    <div id="songName">eks dee</div>
+    <div id="songName2"></div>
+    <div id="songArtists2"></div>
+    <div id="listen2">Listen to part of it here!</div>
     <button id="nextSong4" onclick="backToSecond()">Next song</button>
+    <audio controls="true" src="" id="audio2" type="audio/m4a"></audio>
 </div>
 
 </body>

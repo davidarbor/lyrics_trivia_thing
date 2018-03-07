@@ -69,10 +69,10 @@ h1{
 
 #firstOption{
     position: absolute;
-    top: 44%;
-    left: 10%;
-    height: 250px;
-    width: 350px;
+    top: 35%;
+    left: 25%;
+    height: 200px;
+    width: 450px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
@@ -81,10 +81,10 @@ h1{
 }
 #secondOption{
     position: absolute;
-    top: 44%;
-    left: 50%;
-    height: 250px;
-    width: 350px;
+    top: 50%;
+    left: 25%;
+    height: 200px;
+    width: 450px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
@@ -93,10 +93,10 @@ h1{
 }
 #thirdOption{
     position: absolute;
-    top: 62%;
-    left: 10%;
-    height: 250px;
-    width: 350px;
+    top: 65%;
+    left: 25%;
+    height: 200px;
+    width: 450px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
@@ -105,10 +105,10 @@ h1{
 }
 #fourthOption{
     position: absolute;
-    top: 62%;
-    left: 50%;
-    height: 250px;
-    width: 350px;
+    top: 80%;
+    left: 25%;
+    height: 200px;
+    width: 450px;
     background-color: darkgreen;
     border: solid thick black;
     color: gold;
@@ -122,6 +122,7 @@ h1{
     left: 12%;
     font-size:40pt;
     font-family: "Times New Roman", monospace;
+    text-align: center;
 }
 #loseMessage{
     position: absolute;
@@ -129,6 +130,7 @@ h1{
     left: 19%;
     font-size: 50pt;
     font-family: "Times New Roman", monospace;
+    text-align: center;
 }
 #loseMessage2{
     position: absolute;
@@ -136,18 +138,47 @@ h1{
     left: 16%;
     font-size: 50pt;
     font-family: "Times New Roman", monospace;
+    text-align: center;
 }
-#songName{
+#songName1{
     position: absolute;
-    top: 27%;
+    top: 25%;
     left: 30%;
-    font-size: 70pt;
+    font-size: 50pt;
     font-family: "Times New Roman", monospace;
+    text-align: center;
+}
+
+#songArtists1{
+    position: absolute;
+    top: 31%;
+    left: 7%;
+    font-size: 50pt;
+    font-family: "Times New Roman", monospace;
+    text-align: center;
+}
+
+#songName2{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 50pt;
+    font-family: "Times New Roman", monospace;
+    text-align: center;
+}
+
+#songArtists2{
+    position: absolute;
+    top: 31%;
+    left: 7%;
+    font-size: 50pt;
+    font-family: "Times New Roman", monospace;
+    text-align: center;
 }
 
 #nextSong3{
     position: absolute;
-    top: 48%;
+    top: 51%;
     left: 23%;
     height: 300px;
     width: 500px;
@@ -159,7 +190,7 @@ h1{
 }
 #nextSong4{
     position: absolute;
-    top: 48%;
+    top: 51%;
     left: 23%;
     height: 300px;
     width: 500px;
@@ -168,4 +199,32 @@ h1{
     color: gold;
     font-size: 50pt;
     font-family: "Times New Roman", monospace;
+}
+
+#listen1{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 30pt;
+    font-family: "Times New Roman", monospace;
+}
+
+#listen2{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    font-size: 30pt;
+    font-family: "Times New Roman", monospace;
+}
+
+#audio1{
+    position: absolute;
+    top: 48%;
+    left: 30%;
+}
+
+#audio2{
+    position: absolute;
+    top: 48%;
+    left: 30%;
 }
