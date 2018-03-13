@@ -182,5 +182,7 @@ function guessFourth(){
 
 function backToSecond(){
     $("body").pagecontainer("change", "#page2", {});
+    $("#audio1").trigger("pause");
+    $("#audio2").trigger("pause");
     gameStart();
 }
