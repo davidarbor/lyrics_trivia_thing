@@ -11,6 +11,8 @@ $(document).ready(function(){
     songNum3=Math.floor(Math.random()*songsArray.length);
     songNum4=Math.floor(Math.random()*songsArray.length);
 
+    songNumArray=[songNum, songNum2, songNum3, songNum4];
+
     currentSong=songsArray[songNum];
 
     button1=document.getElementById("firstOption");
@@ -21,36 +23,6 @@ $(document).ready(function(){
 
     buttonOption=Math.floor(Math.random()*buttonArray.length);
 
-    /*text1=document.getElementById("firstOption").textContent;
-    text2=document.getElementById("secondOption").textContent;
-    text3=document.getElementById("thirdOption").textContent;
-    text4=document.getElementById("fourthOption").textContent;*/
-
-    /*$submit.click(function(){
-        $output.empty();
-        // $.ajax({
-        //     url: "http://api.musixmatch.com/ws/1.1/track.get?track_id=15445219&apikey=77c753d1b959d1f133e82303ce171a1d",
-        //     type: 'GET',
-        //     crossDomain: true,
-        //     dataType: 'jsonp',
-        //     success: function(result) {
-        //         console.log(result);
-        //     },
-        //     error: function(){
-        //         alert('Failed!');
-        //     }
-        // });
-        $.ajax({
-            url: 'http://api.musixmatch.com/ws/1.1/track.get?track_id=15445219&apikey=77c753d1b959d1f133e82303ce171a1d',
-            dataType: 'JSONP',
-            jsonpCallback: 'callback',
-            type: 'GET',
-            success: function(data){
-                console.log(data);
-            }
-        });
-
-    });*/
     console.log(songNum);
     console.log(songNum2);
     console.log(songNum3);
@@ -63,6 +35,8 @@ function resetData(){
     songNum2=Math.floor(Math.random()*songsArray.length);
     songNum3=Math.floor(Math.random()*songsArray.length);
     songNum4=Math.floor(Math.random()*songsArray.length);
+
+    songNumArray=[songNum, songNum2, songNum3, songNum4];
 
     currentSong=songsArray[songNum];
 
@@ -82,6 +56,12 @@ songsArray=[song1, song2, song3, song4, song5, song6, song7, song8, song9, song1
 
 function gameStart(){
     resetData();
+    /*for(i=0; i<songNumArray.length-1; i++){
+        if(songNumArray[i]==songNumArray[i+1]){
+        resetData();
+        break;
+        }
+    }*/
     $("#startButton").fadeOut(200);
     $("body").pagecontainer("change", "#page2", {});
     console.log(button1);
@@ -89,27 +69,31 @@ function gameStart(){
     switch(buttonOption){
         case 0:
             document.getElementById("firstOption").textContent=currentSong.songName;
+
             document.getElementById("secondOption").textContent=songsArray[songNum2].songName;
             document.getElementById("thirdOption").textContent=songsArray[songNum3].songName;
             document.getElementById("fourthOption").textContent=songsArray[songNum4].songName;
             break;
         case 1:
-            document.getElementById("firstOption").textContent=songsArray[songNum2].songName;
             document.getElementById("secondOption").textContent=currentSong.songName;
+
+            document.getElementById("firstOption").textContent=songsArray[songNum2].songName;
             document.getElementById("thirdOption").textContent=songsArray[songNum3].songName;
             document.getElementById("fourthOption").textContent=songsArray[songNum4].songName;
             break;
         case 2:
+            document.getElementById("thirdOption").textContent=currentSong.songName;
+
             document.getElementById("firstOption").textContent=songsArray[songNum2].songName;
             document.getElementById("secondOption").textContent=songsArray[songNum3].songName;
-            document.getElementById("thirdOption").textContent=currentSong.songName;
             document.getElementById("fourthOption").textContent=songsArray[songNum4].songName;
             break;
         case 3:
+            document.getElementById("fourthOption").textContent=currentSong.songName;
+
             document.getElementById("firstOption").textContent=songsArray[songNum2].songName;
             document.getElementById("secondOption").textContent=songsArray[songNum3].songName;
             document.getElementById("thirdOption").textContent=songsArray[songNum4].songName;
-            document.getElementById("fourthOption").textContent=currentSong.songName;
             break;
     }
     text1=document.getElementById("firstOption").textContent;
