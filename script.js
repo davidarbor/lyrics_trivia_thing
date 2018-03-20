@@ -56,15 +56,32 @@ songsArray=[song1, song2, song3, song4, song5, song6, song7, song8, song9, song1
 
 function gameStart(){
     resetData();
+    var dupes;
+    do{
+        var set=new Set();
+        dupes=false;
+
+        for(i=0; i<songNumArray.length; ++i){
+            if (set.has(songNumArray[i])){
+                resetData();
+                dupes=true;
+                break;
+            }
+            else{
+                set.add(songNumArray[i]);
+            }
+        }
+    } while(dupes);
     /*for(i=0; i<songNumArray.length-1; i++){
         if(songNumArray[i]==songNumArray[i+1]){
         resetData();
-        break;
         }
+    }*/
+    /*if(songNumArray[0]==songNumArray[1] || songNumArray[0]==songNumArray[2] || songNumArray[0]==songNumArray[3]){
+        resetData();
     }*/
     $("#startButton").fadeOut(200);
     $("body").pagecontainer("change", "#page2", {});
-    console.log(button1);
     document.getElementById("lyricsOutput").innerHTML=currentSong.snippet;
     switch(buttonOption){
         case 0:
@@ -100,7 +117,6 @@ function gameStart(){
     text2=document.getElementById("secondOption").textContent;
     text3=document.getElementById("thirdOption").textContent;
     text4=document.getElementById("fourthOption").textContent;
-    console.log(text1);
 }
 
 function guessFirst(){
