@@ -3,9 +3,6 @@
  */
 
 $(document).ready(function(){
-    var $submit = $("#startButton");
-    var $output = $("#lyricsOutput");
-
     songNum=Math.floor(Math.random()*songsArray.length);
     songNum2=Math.floor(Math.random()*songsArray.length);
     songNum3=Math.floor(Math.random()*songsArray.length);
